@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link type="text/css" rel="stylesheet" href="uploader.css" />
+    <title>Ajax Uploader Installation</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1><a href="default.htm">Ajax Uploader</a></h1>
+            <ul>
+                <li><a href="default.htm">Drag and Drop</a></li>
+                <li><a href="image-upload.htm">Image Upload</a></li>
+                <li><a href="jQuery-upload.htm">jQuery Upload</a></li>
+                <li><a href="installation.htm">Installation</a></li>
+                <li><a href="http://cutesoft.net/forums">Forums</a></li>
+                <li><a href="http://ajaxuploader.com/Order.aspx" class="button">Pricing</a></li>
+            </ul>
+        </nav>
+    </header>
+    <article id="content">
+        <h2>Installation Guide</h2>
+        <p>
+            The following guide shows the steps to implement the Ajax Uploader Control into ASP.NET
+            applications. If you haven't downloaded the software, please download it from <a
+                href="http://ajaxuploader.com/download/Ajax-Uploader.zip">here</a>.
+        </p>
+        <h3>1. Install the assembly
+        </h3>
+        <p>
+            Copy the assembly and license file (CuteWebUI.AjaxUploader.dll, AjaxUploader4.lic) to your application bin folder.
+        </p>
+        <h3>2. Add Uploader httpModule to web.config's httpModules list</h3>
+        <p>
+            To allow Ajax Uploader to handle upload requests, you need to add its HttpModule
+            to your application.
+        </p>
+        <p>
+            IIS Integrated mode
+        </p>
+        <p class="code">
+            &lt;configuration&gt;<br />
+            &nbsp; &lt;system.webServer&gt;<br />
+            &nbsp;&nbsp;&nbsp; &lt;modules&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;add name="CuteWebUI.UploadModule" type="CuteWebUI.UploadModule,CuteWebUI.AjaxUploader"/&gt;<br />
+            &nbsp;&nbsp;&nbsp; &lt;/modules&gt;<br />
+            &nbsp; &lt;/system.webServer&gt;<br />
+            &lt;/configuration&gt;
+        </p>
+        <p>
+            IIS Classic mode
+        </p>
+        <p class="code">
+            &lt;configuration&gt;<br />
+            &nbsp; &lt;system.web&gt;<br />
+            &nbsp;&nbsp;&nbsp; &lt;httpModules&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;add name="CuteWebUI.UploadModule" type="CuteWebUI.UploadModule,CuteWebUI.AjaxUploader"/&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp; &lt;/httpModules&gt;<br />
+            &nbsp; &lt;/system.web&gt;<br />
+            &lt;/configuration&gt;
+        </p>
+        <h3>3. Using the Uploader in a Web Form</h3>
+        <p>
+            a. Register Uploader control in your page
+        </p>
+        <p class="code">
+            &lt;%@ Register TagPrefix="CuteWebUI" Namespace="CuteWebUI" Assembly="CuteWebUI.AjaxUploader" %&gt;
+        </p>
+        <p>
+            b. Insert an Uploader instance into the page.
+        </p>
+        <p class="code">
+            &lt;CuteWebUI:Uploader id="Uploader1" runat="server" /&gt;
+        </p>
+    </article>
+    <div class="clear">
+    </div>
+    <footer>
+        <ul>
+            <li><a href="http://cutesoft.net/Support/">Support Ticket</a></li>
+            <li><a href="http://phpfileuploader.com">PHP File Uploader</a></li>
+            <li><a href="http://aspuploader.com">ASP File Uploader</a></li>
+            <li><a href="http://ajaxuploader.com/Order.aspx">Pricing</a></li>
+            <li><a href="http://ajaxuploader.com/Howtos.htm">Howtos</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,13 @@
+C:\Users\Lenovo\Desktop\IRhomework\IndexingService\bin\Debug\IndexingService.dll
+C:\Users\Lenovo\Desktop\IRhomework\IndexingService\bin\Debug\IndexingService.pdb
+C:\Users\Lenovo\Desktop\IRhomework\IndexingService\bin\Debug\Syn.WordNet.dll
+C:\Users\Lenovo\Desktop\IRhomework\IndexingService\obj\Debug\IndexingService.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\IRhomework\IndexingService\obj\Debug\IndexingService.dll
+C:\Users\Lenovo\Desktop\IRhomework\IndexingService\obj\Debug\IndexingService.pdb
+C:\Users\Lenovo\Desktop\IRhomework\IndexingService\obj\Debug\IndexingService.csprojResolveAssemblyReference.cache
+D:\IRhomework\IndexingService\bin\Debug\IndexingService.dll
+D:\IRhomework\IndexingService\bin\Debug\IndexingService.pdb
+D:\IRhomework\IndexingService\bin\Debug\Syn.WordNet.dll
+D:\IRhomework\IndexingService\obj\Debug\IndexingService.csproj.CoreCompileInputs.cache
+D:\IRhomework\IndexingService\obj\Debug\IndexingService.dll
+D:\IRhomework\IndexingService\obj\Debug\IndexingService.pdb

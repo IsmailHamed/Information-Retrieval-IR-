@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>SymSpell</id>
+    <version>6.3.0</version>
+    <authors>Wolf Garbe &lt;wolf.garbe@faroo.com&gt;</authors>
+    <owners>Wolf Garbe &lt;wolf.garbe@faroo.com&gt;</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+    <projectUrl>https://github.com/wolfgarbe/symspell</projectUrl>
+    <description>Spelling correction &amp; Fuzzy search: 1 million times faster through Symmetric Delete spelling correction algorithm</description>
+    <copyright>Copyright (C) 2018 Wolf Garbe</copyright>
+    <tags>symspell, spelling-correction, spellcheck, spell-check, spelling, fuzzy-search, approximate-string-matching, edit-distance, levenshtein, levenshtein-distance, damerau-levenshtein, word segmentation</tags>
+    <repository type="Git" url="https://github.com/wolfgarbe" />
+    <dependencies>
+      <group targetFramework=".NETStandard2.0" />
+    </dependencies>
+    <contentFiles>
+      <files include="any/netstandard2.0/frequency_dictionary_en_82_765.txt" buildAction="Content" />
+    </contentFiles>
+  </metadata>
+  <files>
+    <file src="C:\Users\Ismail Hamed\source\repos\IRhomework\SymSpell\bin\Debug\netstandard2.0\SymSpell.dll" target="lib\netstandard2.0\SymSpell.dll" />
+    <file src="C:\Users\Ismail Hamed\source\repos\IRhomework\SymSpell\frequency_dictionary_en_82_765.txt" target="content\frequency_dictionary_en_82_765.txt" />
+    <file src="C:\Users\Ismail Hamed\source\repos\IRhomework\SymSpell\frequency_dictionary_en_82_765.txt" target="contentFiles\any\netstandard2.0\frequency_dictionary_en_82_765.txt" />
+  </files>
+</package>

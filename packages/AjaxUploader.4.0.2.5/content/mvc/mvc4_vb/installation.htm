@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ajax Uploader MVC Installation</title>
+    <link type="text/css" rel="stylesheet" href="uploader.css" />
+</head>
+<body>
+    <header>
+        <nav>
+            <h1><a href="default.htm">Ajax Uploader</a></h1>
+            <ul>
+                <li><a href="default.htm">MVC Examples(VB)</a></li>
+                <li><a href="installation.htm">Installation</a></li>
+                <li><a href="http://cutesoft.net/forums">Forums</a></li>
+                <li><a href="http://ajaxuploader.com/Order.aspx" class="button">Pricing</a></li>
+            </ul>
+        </nav>
+    </header>
+    <article id="content">
+        <h2>Installation Guide</h2>
+        <p>
+            The following guide shows the steps to implement the Ajax Uploader Control into ASP.NET MVC 4.0 razor applications. If you haven't downloaded the software, please download it from <a
+                href="http://ajaxuploader.com/download/Ajax-Uploader.zip">here</a>.
+        </p>
+        <h3>1. Install the assembly
+        </h3>
+        <p>
+            Copy the assembly and license file (CuteWebUI.AjaxUploader.dll, AjaxUploader4.lic) to your application bin folder.
+        </p>
+        <p>
+            Copy UploadHandler.ashx to your MVC site.
+        </p>
+        <h3>2. Add Uploader httpModule to web.config's httpModules list</h3>
+        <p>
+            To allow Ajax Uploader to handle upload requests, you need to add its HttpModule
+            to your application.
+        </p>
+        <p>
+            IIS Integrated mode
+        </p>
+        <p class="code">
+            &lt;configuration&gt;<br />
+            &nbsp; &lt;system.webServer&gt;<br />
+            &nbsp;&nbsp;&nbsp; &lt;modules&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;add name="CuteWebUI.UploadModule" type="CuteWebUI.UploadModule,CuteWebUI.AjaxUploader"/&gt;<br />
+            &nbsp;&nbsp;&nbsp; &lt;/modules&gt;<br />
+            &nbsp; &lt;/system.webServer&gt;<br />
+            &lt;/configuration&gt;
+        </p>  
+        <p>
+            IIS Classic mode
+        </p>
+        <p class="code">
+            &lt;configuration&gt;<br />
+            &nbsp; &lt;system.web&gt;<br />
+            &nbsp;&nbsp;&nbsp; &lt;httpModules&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;add name="CuteWebUI.UploadModule" type="CuteWebUI.UploadModule,CuteWebUI.AjaxUploader"/&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp; &lt;/httpModules&gt;<br />
+            &nbsp; &lt;/system.web&gt;<br />
+            &lt;/configuration&gt;
+        </p>      
+        <h3>
+            3. Using the Uploader in a MVC page</h3>
+        <p>
+            a. Register Uploader control in MVC Controller</p>
+        <p class="code">
+			using (CuteWebUI.MvcUploader uploader = new CuteWebUI.MvcUploader(System.Web.HttpContext.Current))<br />
+			{<br />
+			&nbsp;&nbsp;&nbsp;	uploader.UploadUrl = Response.ApplyAppPathModifier("~/UploadHandler.ashx");<br />
+			&nbsp;&nbsp;&nbsp;	uploader.Name = "myuploader";<br />
+			&nbsp;&nbsp;&nbsp;	uploader.AllowedFileExtensions = "*.jpg,*.gif,*.png,*.bmp,*.zip,*.rar";<br />
+			&nbsp;&nbsp;&nbsp;	uploader.InsertText = "Select a file to upload";<br />
+			&nbsp;&nbsp;&nbsp;	ViewData["uploaderhtml"] = uploader.Render();<br />
+			}
+        </p>
+        <p>
+            b. Insert an Uploader instance into the MVC page</p>
+        <p class="code">
+            @{Html.BeginForm();}<br />
+			&nbsp;&nbsp;&nbsp;@Html.Raw(ViewBag.uploaderhtml)<br />
+			@{Html.EndForm();}
+        </p>
+    </article>
+    <div class="clear">
+    </div>
+    <footer>
+        <ul>
+            <li><a href="http://cutesoft.net/Support/">Support Ticket</a></li>
+            <li><a href="http://phpfileuploader.com">PHP File Uploader</a></li>
+            <li><a href="http://aspuploader.com">ASP File Uploader</a></li>
+            <li><a href="http://ajaxuploader.com/Order.aspx">Pricing</a></li>
+            <li><a href="http://ajaxuploader.com/Howtos.htm">Howtos</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link type="text/css" rel="stylesheet" href="uploader.css" />
+    <title>Ajax Uploader Installation</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1><a href="default.htm">Ajax Uploader</a></h1>
+            <ul>
+                <li><a href="default.htm">Advanced examples(C#)</a></li>
+                <li><a href="installation.htm">Installation</a></li>
+                <li><a href="http://cutesoft.net/forums">Forums</a></li>
+                <li><a href="http://ajaxuploader.com/Order.aspx" class="button">Pricing</a></li>
+            </ul>
+        </nav>
+    </header>
+    <article id="content">
+        <h2>Installation Guide</h2>
+        <p>
+            There are 4 simple steps to install Ajax Uploader Advanced examples.
+        </p>
+        <h3>1. Install the assembly
+        </h3>
+        <p>
+            Copy the assembly and license file (CuteWebUI.AjaxUploader.dll, AjaxUploader4.lic) to your application bin folder.
+        </p>
+        <h3>2. Add Uploader httpModule to web.config's httpModules list</h3>
+        <p>
+            To allow Ajax Uploader to handle upload requests, you need to add its HttpModule
+            to your application.
+        </p>
+        <p>
+            IIS Integrated mode
+        </p>
+        <p class="code">
+            &lt;configuration&gt;<br />
+            &nbsp; &lt;system.webServer&gt;<br />
+            &nbsp;&nbsp;&nbsp; &lt;modules&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;add name="CuteWebUI.UploadModule" type="CuteWebUI.UploadModule,CuteWebUI.AjaxUploader"/&gt;<br />
+            &nbsp;&nbsp;&nbsp; &lt;/modules&gt;<br />
+            &nbsp; &lt;/system.webServer&gt;<br />
+            &lt;/configuration&gt;
+        </p>
+        <p>
+            IIS Classic mode
+        </p>
+        <p class="code">
+            &lt;configuration&gt;<br />
+            &nbsp; &lt;system.web&gt;<br />
+            &nbsp;&nbsp;&nbsp; &lt;httpModules&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;add name="CuteWebUI.UploadModule" type="CuteWebUI.UploadModule,CuteWebUI.AjaxUploader"/&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp; &lt;/httpModules&gt;<br />
+            &nbsp; &lt;/system.web&gt;<br />
+            &lt;/configuration&gt;
+        </p>
+        <h3>3. Execute App_Data\InstallSamples.sql against your existing database or create a new database.</h3>
+        <h3>4. Update the web.config to use your custom connection string. </h3>
+        <p class="code">
+            &lt;add key="SampleSqlServer" value="server=(local);database=uploadersamples;uid=test;pwd=test" /&gt;
+        </p>
+    </article>
+    <div class="clear">
+    </div>
+    <footer>
+        <ul>
+            <li><a href="http://cutesoft.net/Support/">Support Ticket</a></li>
+            <li><a href="http://phpfileuploader.com">PHP File Uploader</a></li>
+            <li><a href="http://aspuploader.com">ASP File Uploader</a></li>
+            <li><a href="http://ajaxuploader.com/Order.aspx">Pricing</a></li>
+            <li><a href="http://ajaxuploader.com/Howtos.htm">Howtos</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
